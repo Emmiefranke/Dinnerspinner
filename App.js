@@ -1,20 +1,15 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { Text, View, Button } from "react-native";
+import { dinners } from "./dinners";
+import { styles } from "./styles";
+import { SpinnerButton } from "./SpinnerButton";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hier komt de Dinnerspinner</Text>
+      <Text>{dinners[2].name}</Text>
+      <SpinnerButton />
       <StatusBar style="auto" />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
